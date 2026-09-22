@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metagenomics Stack &mdash; Integrated Tools for Microbial Genomics</title>
-    <meta name="description" content="An integrated ecosystem of open-source tools and training material for metagenomics: 2Pipe, MAGFlow, BIgMAG, CAZyBERT and TaxoFlow.">
-    <link rel="icon" type="image/png" href="assets/logos/2pipe.png">
+    <title>Breaking MAG &mdash; From Metagenomics Pipeline Selection to Functional Discovery</title>
+    <meta name="description" content="Breaking MAG: an integrated ecosystem of open-source tools and training material for metagenomics &mdash; 2Pipe, MAGFlow, BIgMAG, CAZyBERT and TaxoFlow.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,13 +22,20 @@
     <header class="nav" id="nav">
         <a class="nav__brand" href="#top">
             <span class="nav__mark">M</span>
-            <span class="nav__name">Metagenomics<span>Stack</span></span>
+            <span class="nav__name">Breaking<span>MAG</span></span>
         </a>
-        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
+        <div class="nav__controls">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light / dark theme" aria-live="polite">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.6M12 19.4V22M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2 12h2.6M19.4 12H22M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            </button>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
         <nav class="nav__menu" id="navMenu">
             <a href="#overview" class="nav__link">Overview</a>
+            <a href="#thesis" class="nav__link">Thesis</a>
             <a href="#tools" class="nav__link">Tools</a>
             <a href="#learning" class="nav__link">Learning</a>
             <a href="#publications" class="nav__link">Publications</a>
@@ -40,12 +47,13 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
         <div class="hero__inner">
-            <span class="badge hero__badge reveal">An integrated ecosystem for metagenomics &amp; bioinformatics</span>
-            <h1 class="hero__title reveal">From Question to<br><span class="grad">Genomes</span> &amp; Knowledge</h1>
+            <span class="badge hero__badge reveal">An integrated open-source ecosystem</span>
+            <h1 class="hero__title reveal">Breaking <span class="grad">MAG</span></h1>
             <p class="hero__sub reveal">
-                A curated set of open-source applications that guide you through metagenomics at every stage —
-                choosing the right pipeline, benchmarking MAG quality, visualizing results, annotating with
-                deep learning, and building your own reproducible workflows.
+                From metagenomics pipeline selection to functional discovery &mdash; a thesis-built suite of
+                applications and courses that carry you from choosing the right workflow, to benchmarking
+                MAG quality, visualizing results, annotating with deep learning, and building your own
+                reproducible pipelines.
             </p>
             <div class="hero__actions reveal">
                 <a href="#tools" class="btn btn--primary">Explore the tools</a>
@@ -54,11 +62,11 @@
         </div>
         <div class="hero__stats reveal">
             <div class="stat">
-                <span class="stat__num" data-count="4">0</span>
+                <span class="stat__num" data-count="5">0</span>
                 <span class="stat__label">Open-source tools</span>
             </div>
             <div class="stat">
-                <span class="stat__num" data-count="41">0</span>
+                <span class="stat__num" data-count="50">0</span>
                 <span class="stat__label">Pipelines reviewed</span>
             </div>
             <div class="stat">
@@ -115,6 +123,32 @@
         </figure>
     </section>
 
+    <!-- ============ THESIS BRIEFING ============ -->
+    <section class="section section--alt" id="thesis">
+        <div class="section__head reveal">
+            <span class="kicker">The thesis</span>
+            <h2 class="section__title">Breaking MAG: From Metagenomics Pipeline Selection to Functional Discovery</h2>
+            <p class="section__lead">
+                A one-page briefing of the thesis behind this ecosystem &mdash; the research questions,
+                the integrated framework and how each tool contributes to moving from pipeline selection
+                to functional discovery. Read it below or download a copy.
+            </p>
+        </div>
+        <div class="thesis reveal">
+            <div class="thesis__actions">
+                <a class="btn btn--primary" href="assets/thesis_briefing.pdf" download="Thesis_briefing.pdf">Download briefing</a>
+                <a class="btn btn--ghost" href="assets/thesis_briefing.pdf" target="_blank" rel="noopener">Open full size</a>
+            </div>
+            <div class="thesis__frame">
+                <embed src="assets/thesis_briefing.pdf" type="application/pdf" title="Thesis briefing — Breaking MAG">
+                <div class="thesis__fallback">
+                    <p>Your browser does not display PDFs inline.</p>
+                    <a class="btn btn--primary" href="assets/thesis_briefing.pdf" download="Thesis_briefing.pdf">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ TOOLS ============ -->
     <section class="section section--alt" id="tools">
         <div class="section__head reveal">
@@ -145,7 +179,7 @@
                 </div>
                 <p class="card__desc">
                     An interactive decision-support web app that matches you with the most suitable
-                    MAG reconstruction pipeline. It presents an overview of more than 40 pipelines and
+                    MAG reconstruction pipeline. It presents an overview of more than 50 pipelines and
                     lets you evaluate tool combinations through a guided questionnaire, a pipeline
                     gallery, workflow diagrams, and technical comparison tables.
                 </p>
@@ -452,15 +486,6 @@
                 <span class="pub__arrow">&nearr;</span>
             </a>
 
-            <a class="pub reveal" href="https://doi.org/10.20944/preprints202506.0703.v2" target="_blank" rel="noopener">
-                <span class="pub__tag">Preprints</span>
-                <div class="pub__body">
-                    <h3>2Pipe: It starts with a question. Matching you with the correct pipeline for MAG reconstruction</h3>
-                    <p>Yepes-García J, Falquet L. <em>Preprints</em> 2025, doi: 10.20944/preprints202506.0703.v2.</p>
-                </div>
-                <span class="pub__arrow">&nearr;</span>
-            </a>
-
             <a class="pub reveal" href="https://doi.org/10.14806/ej.30.0.1063" target="_blank" rel="noopener">
                 <span class="pub__tag">EMBnet.journal</span>
                 <div class="pub__body">
@@ -479,7 +504,9 @@
                 <span class="kicker">About</span>
                 <h2 class="section__title">Built by scientists, for scientists</h2>
                 <p class="about__text">
-                    The tools and training material in this ecosystem are developed by
+                    This ecosystem is the result of the PhD thesis
+                    <strong>&ldquo;Breaking MAG: From Metagenomics Pipeline Selection to Functional Discovery&rdquo;</strong>.
+                    The tools and training material are developed by
                     <strong>Jeferyd Yepes-García</strong> at the
                     <a href="https://www.unifr.ch/bio/en/groups/falquet/" target="_blank" rel="noopener">Falquet group (BUGFri)</a>,
                     University of Fribourg, in collaboration with <strong>Laurent Falquet</strong>,
@@ -534,9 +561,9 @@
             <div>
                 <a class="nav__brand" href="#top">
                     <span class="nav__mark">M</span>
-                    <span class="nav__name">Metagenomics<span>Stack</span></span>
+                    <span class="nav__name">Breaking<span>MAG</span></span>
                 </a>
-                <p class="footer__text">An integrated ecosystem of open-source tools and training material for metagenomics and microbial bioinformatics.</p>
+                <p class="footer__text">An integrated ecosystem of open-source tools and training material for metagenomics and microbial bioinformatics &mdash; a <strong>Breaking MAG</strong> thesis project.</p>
             </div>
             <div>
                 <h5>Tools</h5>
@@ -560,7 +587,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <span>&copy; <span id="year"></span> Metagenomics Stack &mdash; Jeferyd Yepes-García.</span>
+            <span>&copy; <span id="year"></span> Breaking MAG &mdash; Jeferyd Yepes-García.</span>
             <span>All tools are open source. Citations welcome.</span>
         </div>
     </footer>

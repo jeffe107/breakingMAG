@@ -1,8 +1,29 @@
 /* ============================================================
-   Metagenomics Stack — main.js
-   Navigation, reveal-on-scroll, filters, counters, back-to-top.
+   Breaking MAG — main.js
+   Theme toggle, navigation, reveal-on-scroll, filters, counters,
+   back-to-top.
    ============================================================ */
 document.documentElement.classList.add("js");
+
+/* ---------- Theme toggle (dark default, persisted) ---------- */
+const THEME_KEY = "breakingmag-theme";
+const THEME_STORAGE = typeof Storage !== "undefined" ? localStorage : null;
+
+const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+};
+
+const savedTheme = THEME_STORAGE ? THEME_STORAGE.getItem(THEME_KEY) : null;
+document.documentElement.setAttribute("data-theme", savedTheme || "dark");
+
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+    if (THEME_STORAGE) THEME_STORAGE.setItem(THEME_KEY, next);
+});
+applyTheme(document.documentElement.getAttribute("data-theme"));
 
 /* ---------- Nav bar: scroll state + mobile toggle ---------- */
 const nav = document.getElementById("nav");
