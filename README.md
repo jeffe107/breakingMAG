@@ -16,6 +16,7 @@ website/
 └── assets/
     ├── favicon.png     # Browser tab icon
     ├── thesis_briefing.pdf
+    ├── video/          # SIB 2024 "Remarkable Output" award video (MAGFlow & BIgMAG)
     ├── img/            # Framework / workflow diagrams
     └── logos/          # Tool logos
 ```
@@ -26,8 +27,8 @@ The site is fully static — a single `index.html` with no build step, framework
 
 - **Hero** — tagline, stats, calls to action
 - **Overview** — the integrated framework (Decide → Benchmark → Annotate → Build) + integration diagram
-- **Tools** — cards for 2Pipe, MAGFlow, BIgMAG and CAZyBERT, with filter by category and all access links (apps, GitHub, Zenodo, PyPI, papers)
-- **Learning** — TaxoFlow tutorial, Nextflow in Action, Metagenomics Data Analysis, Python for Bioinformatics
+- **Tools** — cards for 2Pipe, MAGFlow, BIgMAG and CAZyBERT, with filter by category and all access links (apps, GitHub, Zenodo, PyPI, papers); MAGFlow and BIgMAG include the SIB 2024 "Remarkable Output" award video (`assets/video/SIB_RO2024.mp4`)
+- **Learning** — TaxoFlow tutorial, Nextflow in Action, Metagenomics Data Analysis, Python for Bioinformatics (with YouTube recordings)
 - **Publications** — open-access papers and DOIs
 - **Thesis** — embedded preview + download of `assets/thesis_briefing.pdf`
 - **About** — authors, affiliations, funding acknowledgment

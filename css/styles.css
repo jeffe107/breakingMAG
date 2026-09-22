@@ -447,6 +447,13 @@ button { font-family: inherit; cursor: pointer; }
     color: var(--muted-2);
     background: rgba(255, 255, 255, 0.02);
 }
+.tag--award {
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.45);
+    background: rgba(245, 158, 11, 0.10);
+    font-weight: 600;
+}
+[data-theme="light"] .tag--award { color: #b45309; background: rgba(245, 158, 11, 0.14); }
 
 .card__links {
     margin-top: auto;
