@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metagenomics Stack &mdash; Integrated Tools for Microbial Genomics</title>
+    <meta name="description" content="An integrated ecosystem of open-source tools and training material for metagenomics: 2Pipe, MAGFlow, BIgMAG, CAZyBERT and TaxoFlow.">
+    <link rel="icon" type="image/png" href="assets/logos/2pipe.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Background decoration -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <a class="nav__brand" href="#top">
+            <span class="nav__mark">M</span>
+            <span class="nav__name">Metagenomics<span>Stack</span></span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav__menu" id="navMenu">
+            <a href="#overview" class="nav__link">Overview</a>
+            <a href="#tools" class="nav__link">Tools</a>
+            <a href="#learning" class="nav__link">Learning</a>
+            <a href="#publications" class="nav__link">Publications</a>
+            <a href="#about" class="nav__link">About</a>
+            <a href="#tools" class="nav__cta">Explore tools</a>
+        </nav>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+        <div class="hero__inner">
+            <span class="badge hero__badge reveal">An integrated ecosystem for metagenomics &amp; bioinformatics</span>
+            <h1 class="hero__title reveal">From Question to<br><span class="grad">Genomes</span> &amp; Knowledge</h1>
+            <p class="hero__sub reveal">
+                A curated set of open-source applications that guide you through metagenomics at every stage —
+                choosing the right pipeline, benchmarking MAG quality, visualizing results, annotating with
+                deep learning, and building your own reproducible workflows.
+            </p>
+            <div class="hero__actions reveal">
+                <a href="#tools" class="btn btn--primary">Explore the tools</a>
+                <a href="#learning" class="btn btn--ghost">Learning material</a>
+            </div>
+        </div>
+        <div class="hero__stats reveal">
+            <div class="stat">
+                <span class="stat__num" data-count="4">0</span>
+                <span class="stat__label">Open-source tools</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num" data-count="41">0</span>
+                <span class="stat__label">Pipelines reviewed</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num" data-count="8">0</span>
+                <span class="stat__label">Quality metrics</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num" data-count="4">0</span>
+                <span class="stat__label">Learning resources</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ OVERVIEW / FRAMEWORK ============ -->
+    <section class="section" id="overview">
+        <div class="section__head reveal">
+            <span class="kicker">Overview</span>
+            <h2 class="section__title">One framework, four complementary pieces</h2>
+            <p class="section__lead">
+                The tools are designed to work hand-in-hand across the entire MAG workflow.
+                Start with a decision, run and evaluate a pipeline, explore the results, and
+                annotate what homology-based methods cannot see.
+            </p>
+        </div>
+
+        <div class="steps reveal">
+            <article class="step">
+                <span class="step__num">01</span>
+                <h3 class="step__title">Decide</h3>
+                <p class="step__text">Answer a guided questionnaire and let <strong>2Pipe</strong> match you with the most suitable MAG reconstruction pipeline from its curated catalogue.</p>
+            </article>
+            <article class="step">
+                <span class="step__num">02</span>
+                <h3 class="step__title">Benchmark</h3>
+                <p class="step__text"><strong>MAGFlow</strong> measures genome quality and taxonomy at scale; <strong>BIgMAG</strong> turns those results into an explorable, interactive dashboard.</p>
+            </article>
+            <article class="step">
+                <span class="step__num">03</span>
+                <h3 class="step__title">Annotate</h3>
+                <p class="step__text"><strong>CAZyBERT</strong> extends CAZyme annotation beyond homology, using deep learning to classify sequences invisible to reference-based tools.</p>
+            </article>
+            <article class="step">
+                <span class="step__num">04</span>
+                <h3 class="step__title">Build</h3>
+                <p class="step__text">When no pipeline fits your constraints, <strong>TaxoFlow</strong> teaches you to build reproducible, scalable pipelines with Nextflow following nf-core best practices.</p>
+            </article>
+        </div>
+
+        <figure class="figure reveal">
+            <div class="figure__frame">
+                <img src="assets/img/integration_framework.png" alt="Integration diagram connecting 2Pipe, MAGFlow, BIgMAG and TaxoFlow" loading="lazy">
+            </div>
+            <figcaption>How the components of the framework relate to each other.</figcaption>
+        </figure>
+    </section>
+
+    <!-- ============ TOOLS ============ -->
+    <section class="section section--alt" id="tools">
+        <div class="section__head reveal">
+            <span class="kicker">Applications</span>
+            <h2 class="section__title">The tools</h2>
+            <p class="section__lead">Each application is open source, documented, and ready to use &mdash; click through to access, explore or cite them.</p>
+        </div>
+
+        <div class="filter reveal" id="toolFilter">
+            <button class="chip chip--active" data-filter="all">All</button>
+            <button class="chip" data-filter="decision">Decision support</button>
+            <button class="chip" data-filter="pipeline">Integrative pipelines</button>
+            <button class="chip" data-filter="explore">Visualization</button>
+            <button class="chip" data-filter="ai">Artificial intelligence</button>
+        </div>
+
+        <div class="cards" id="toolCards">
+
+            <!-- 2Pipe -->
+            <article class="card reveal" data-category="decision">
+                <div class="card__top">
+                    <img class="card__logo" src="assets/logos/2pipe.png" alt="2Pipe logo">
+                    <div class="card__titles">
+                        <h3 class="card__name">2Pipe</h3>
+                        <p class="card__tagline">It starts with a question</p>
+                    </div>
+                    <span class="card__badge">Decision support</span>
+                </div>
+                <p class="card__desc">
+                    An interactive decision-support web app that matches you with the most suitable
+                    MAG reconstruction pipeline. It presents an overview of more than 40 pipelines and
+                    lets you evaluate tool combinations through a guided questionnaire, a pipeline
+                    gallery, workflow diagrams, and technical comparison tables.
+                </p>
+                <ul class="card__list">
+                    <li>Questionnaire-based matching by data type, goals &amp; infrastructure</li>
+                    <li>Detailed profiles, workflow diagrams and comparison tables</li>
+                    <li>Add or request new pipelines to the catalogue</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Web app</span>
+                    <span class="tag">MAG reconstruction</span>
+                    <span class="tag">Community-driven</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://2pipe.app/" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Open app</a>
+                    <a href="https://github.com/jeffe107/2pipe" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://doi.org/10.1128/msystems.00844-25" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Paper</a>
+                    <a href="https://zenodo.org/doi/10.5281/zenodo.17334924" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Zenodo</a>
+                </div>
+            </article>
+
+            <!-- MAGFlow -->
+            <article class="card reveal" data-category="pipeline">
+                <div class="card__top">
+                    <img class="card__logo" src="assets/logos/magflow.png" alt="MAGFlow logo">
+                    <div class="card__titles">
+                        <h3 class="card__name">MAGFlow</h3>
+                        <p class="card__tagline">Quality &amp; taxonomy, at scale</p>
+                    </div>
+                    <span class="card__badge">Nextflow pipeline</span>
+                </div>
+                <p class="card__desc">
+                    A reproducible Nextflow (DSL2) pipeline that measures the quality of your MAGs
+                    with multiple tools and assigns taxonomy, generating the input file for BIgMAG.
+                    Built on nf-core community standards, it scales from a laptop to HPC and the cloud.
+                </p>
+                <ul class="card__list">
+                    <li>CheckM2 &amp; BUSCO for completeness and contamination</li>
+                    <li>QUAST metrics, GUNC chimerism detection, optional GTDB-Tk2 taxonomy</li>
+                    <li>Docker, Singularity, Conda, slurm / cloud executors</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Nextflow</span>
+                    <span class="tag">nf-core style</span>
+                    <span class="tag">HPC / Cloud</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://github.com/jeffe107/MAGFlow" class="btn btn--sm btn--primary" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://cloud.seqera.io/launch?pipeline=https://github.com/jeffe107/magflow" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Seqera launch</a>
+                    <a href="https://zenodo.org/doi/10.5281/zenodo.11178032" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Zenodo</a>
+                    <a href="https://doi.org/10.12688/f1000research.152290.1" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Paper</a>
+                </div>
+            </article>
+
+            <!-- BIgMAG -->
+            <article class="card reveal" data-category="explore">
+                <div class="card__top">
+                    <img class="card__logo" src="assets/logos/bigmag.png" alt="BIgMAG logo">
+                    <div class="card__titles">
+                        <h3 class="card__name">BIgMAG</h3>
+                        <p class="card__tagline">Board InteGrating Metagenome-Assembled Genomes</p>
+                    </div>
+                    <span class="card__badge">Dashboard</span>
+                </div>
+                <p class="card__desc">
+                    An interactive plotly Dash dashboard to explore metagenome quality metrics and
+                    taxonomical annotations from several tools at once. Works directly with the file
+                    generated by MAGFlow or nf-core/mag, and can be exported as a standalone HTML report.
+                </p>
+                <ul class="card__list">
+                    <li>8 synchronized plots covering CheckM2, BUSCO, QUAST, GUNC, GTDB-Tk2</li>
+                    <li>Interactive raw-data table with filtering and highlighting</li>
+                    <li>pip / conda installable or run the hosted instance</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Python</span>
+                    <span class="tag">Plotly Dash</span>
+                    <span class="tag">nf-core/mag compatible</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://bigmag.online/" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Open app</a>
+                    <a href="https://github.com/jeffe107/BIgMAG" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://pypi.org/project/bigmag/" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">PyPI</a>
+                    <a href="https://doi.org/10.12688/f1000research.152290.1" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Paper</a>
+                </div>
+            </article>
+
+            <!-- CAZyBERT -->
+            <article class="card reveal" data-category="ai">
+                <div class="card__top">
+                    <img class="card__logo" src="assets/logos/cazybert.png" alt="CAZyBERT logo">
+                    <div class="card__titles">
+                        <h3 class="card__name">CAZyBERT</h3>
+                        <p class="card__tagline">Deep learning for CAZyme annotation</p>
+                    </div>
+                    <span class="card__badge">Artificial intelligence</span>
+                </div>
+                <p class="card__desc">
+                    A fine-tuned protein language model (ProteinBERT) that classifies sequences into
+                    30 lignocellulose-degrading CAZy families. Upload a FASTA file and receive family
+                    predictions with confidence values and distribution plots.
+                </p>
+                <ul class="card__list">
+                    <li>Captures sequences missed by HMMER &amp; DIAMOND (dbCAN3)</li>
+                    <li>Outperforms reference-based methods on structural homologs</li>
+                    <li>Runs as an interactive notebook app &mdash; upload and go</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Protein language model</span>
+                    <span class="tag">CAZy families</span>
+                    <span class="tag">Marimo app</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://molab.marimo.io/notebooks/nb_2RsaEmFXPHf9wLQVdSu95z/app" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Open app</a>
+                    <a href="https://github.com/jeffe107/cazybert" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- MAGFlow -> BIgMAG flow detail -->
+        <div class="flow reveal">
+            <div class="flow__node">
+                <span class="flow__icon">&#9638;</span>
+                <div>
+                    <h4>MAGFlow</h4>
+                    <p>Bins / MAGs &rarr; quality &amp; taxonomy</p>
+                </div>
+            </div>
+            <div class="flow__arrow" aria-hidden="true">&rarr;</div>
+            <div class="flow__node">
+                <span class="flow__icon">&#9671;</span>
+                <div>
+                    <h4 style="text-align:left;">&nbsp;BIgMAG</h4>
+                    <p>Interactive dashboard &amp; reports</p>
+                </div>
+            </div>
+            <p class="flow__note">MAGFlow outputs a single <code>final_df.tsv</code> file that renders directly in BIgMAG &mdash; and BIgMAG is also compatible with output from <code>nf-core/mag</code>.</p>
+        </div>
+    </section>
+
+    <!-- ============ LEARNING ============ -->
+    <section class="section" id="learning">
+        <div class="section__head reveal">
+            <span class="kicker">Education</span>
+            <h2 class="section__title">Learning material</h2>
+            <p class="section__lead">
+                Hands-on courses and tutorials built to accompany the tools &mdash; from your very first
+                Nextflow pipeline to complete metagenomics analyses and Python for bioinformatics.
+            </p>
+        </div>
+
+        <div class="cards">
+            <article class="card learn-card reveal">
+                <div class="card__top">
+                    <div class="learn-card__mark">TF</div>
+                    <div class="card__titles">
+                        <h3 class="card__name">TaxoFlow: The Tutorial</h3>
+                        <p class="card__tagline">Build your own taxonomic profiling pipeline</p>
+                    </div>
+                </div>
+                <p class="card__desc">
+                    A step-by-step, self-paced tutorial to wrap a validated metagenomics taxonomic
+                    profiling protocol with Nextflow: host removal, Kraken2/Bracken annotation, Bayesian
+                    abundance re-estimation and reporting &mdash; modular, containerized and FAIR.
+                </p>
+                <ul class="card__list">
+                    <li>Single-sample and multi-sample workflows</li>
+                    <li>Aligned with nf-core best practices</li>
+                    <li>Runs on GitHub Codespaces, local, HPC or CodeSandbox</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Nextflow</span>
+                    <span class="tag">Self-paced</span>
+                    <span class="tag">CC0</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://taxoflow.work/" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Visit tutorial</a>
+                    <a href="https://github.com/jeffe107/taxoflow_tutorial" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://doi.org/10.46471/gigabyte.187" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Paper</a>
+                </div>
+            </article>
+
+            <article class="card learn-card reveal">
+                <div class="card__top">
+                    <div class="learn-card__mark" style="--mc:#38bdf8;">NX</div>
+                    <div class="card__titles">
+                        <h3 class="card__name">Nextflow in Action</h3>
+                        <p class="card__tagline">Build smarter, faster, reproducible pipelines</p>
+                    </div>
+                </div>
+                <p class="card__desc">
+                    A full SIB course that takes you from workflow basics to fully modular Nextflow
+                    pipelines: orchestration, modularity, containers, and running on different
+                    environments &mdash; with lectures, exercises, polls and group work.
+                </p>
+                <ul class="card__list">
+                    <li>Recognize the value of workflow orchestration</li>
+                    <li>Develop and modularize your own pipelines</li>
+                    <li>Run them from laptop to HPC and cloud</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Course</span>
+                    <span class="tag">SIB</span>
+                    <span class="tag">CC BY-SA</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://sib-swiss.github.io/nextflow-training/" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Course website</a>
+                    <a href="https://zenodo.org/doi/10.5281/zenodo.19311980" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">Zenodo</a>
+                </div>
+            </article>
+
+            <article class="card learn-card reveal">
+                <div class="card__top">
+                    <div class="learn-card__mark" style="--mc:#34d399;">MG</div>
+                    <div class="card__titles">
+                        <h3 class="card__name">Metagenomics Data Analysis</h3>
+                        <p class="card__tagline">A 4-day hands-on workshop</p>
+                    </div>
+                </div>
+                <p class="card__desc">
+                    A complete workshop covering quality control of short and long reads, targeted
+                    amplicon analysis with DADA2 and Phyloseq, reference-based classification with
+                    Kraken2/Bracken and Krona/Pavian, and MAG analysis with BIgMAG and friends.
+                </p>
+                <ul class="card__list">
+                    <li>Day 1 &mdash; FastQC quality control</li>
+                    <li>Day 2 &mdash; DADA2 + Phyloseq diversity</li>
+                    <li>Day 3 &mdash; Kraken2/Bracken, Krona, Pavian</li>
+                    <li>Day 4 &mdash; MAG quality &amp; functional annotation</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Workshop</span>
+                    <span class="tag">SIB / IMDAMM</span>
+                    <span class="tag">CC BY</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://sib-swiss.github.io/metagenomics-training/" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Workshop website</a>
+                </div>
+            </article>
+
+            <article class="card learn-card reveal">
+                <div class="card__top">
+                    <div class="learn-card__mark" style="--mc:#c084fc;">PY</div>
+                    <div class="card__titles">
+                        <h3 class="card__name">Python for Bioinformatics</h3>
+                        <p class="card__tagline">5 sequential hands-on notebooks</p>
+                    </div>
+                </div>
+                <p class="card__desc">
+                    A workshop that takes you from querying public databases (UniProt, SRA) and parsing
+                    sequence files, through an RNA-seq pipeline, to building interactive Plotly Dash apps
+                    and consolidating everything in a mini research project.
+                </p>
+                <ul class="card__list">
+                    <li>REST APIs, Biopython, pandas &amp; matplotlib</li>
+                    <li>Interactive apps with Plotly Dash</li>
+                    <li>Run an RNA-seq pipeline with Nextflow</li>
+                </ul>
+                <div class="card__meta">
+                    <span class="tag">Notebooks</span>
+                    <span class="tag">Jupyter</span>
+                    <span class="tag">Codespaces ready</span>
+                </div>
+                <div class="card__links">
+                    <a href="https://github.com/jeffe107/workshopBioSeryl" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Materials</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section class="section section--alt" id="publications">
+        <div class="section__head reveal">
+            <span class="kicker">References</span>
+            <h2 class="section__title">Publications</h2>
+            <p class="section__lead">Peer-reviewed articles and preprints behind the tools and their training material. All open access.</p>
+        </div>
+
+        <div class="pubs">
+            <a class="pub reveal" href="https://doi.org/10.1128/msystems.00844-25" target="_blank" rel="noopener">
+                <span class="pub__tag">mSystems</span>
+                <div class="pub__body">
+                    <h3>2Pipe starts with a question: matching you with the correct pipeline for MAG reconstruction</h3>
+                    <p>Yepes-García J, Falquet L. <em>mSystems</em> 2026, 11(2):e00844-25.</p>
+                </div>
+                <span class="pub__arrow">&nearr;</span>
+            </a>
+
+            <a class="pub reveal" href="https://doi.org/10.12688/f1000research.152290.1" target="_blank" rel="noopener">
+                <span class="pub__tag">F1000Research</span>
+                <div class="pub__body">
+                    <h3>Metagenome quality metrics and taxonomical annotation visualization through the integration of MAGFlow and BIgMAG</h3>
+                    <p>Yepes-García J, Falquet L. <em>F1000Research</em> 2024, 13:640.</p>
+                </div>
+                <span class="pub__arrow">&nearr;</span>
+            </a>
+
+            <a class="pub reveal" href="https://doi.org/10.46471/gigabyte.187" target="_blank" rel="noopener">
+                <span class="pub__tag">Gigabyte</span>
+                <div class="pub__body">
+                    <h3>TaxoFlow: The Tutorial &mdash; An Educational Nextflow Pipeline for Metagenomics Taxonomic Profiling</h3>
+                    <p>Yepes-García J, Falquet L. <em>Gigabyte</em> 2025. Preprint: 10.20944/preprints202512.1989.v2.</p>
+                </div>
+                <span class="pub__arrow">&nearr;</span>
+            </a>
+
+            <a class="pub reveal" href="https://doi.org/10.20944/preprints202506.0703.v2" target="_blank" rel="noopener">
+                <span class="pub__tag">Preprints</span>
+                <div class="pub__body">
+                    <h3>2Pipe: It starts with a question. Matching you with the correct pipeline for MAG reconstruction</h3>
+                    <p>Yepes-García J, Falquet L. <em>Preprints</em> 2025, doi: 10.20944/preprints202506.0703.v2.</p>
+                </div>
+                <span class="pub__arrow">&nearr;</span>
+            </a>
+
+            <a class="pub reveal" href="https://doi.org/10.14806/ej.30.0.1063" target="_blank" rel="noopener">
+                <span class="pub__tag">EMBnet.journal</span>
+                <div class="pub__body">
+                    <h3>Metagenomics workshop in Colombia: hands-on training for mixed microbial communities in rice straw</h3>
+                    <p>Yepes-García J, Falquet L. <em>EMBnet.journal</em> 2024, 30:e1063.</p>
+                </div>
+                <span class="pub__arrow">&nearr;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+        <div class="about reveal">
+            <div>
+                <span class="kicker">About</span>
+                <h2 class="section__title">Built by scientists, for scientists</h2>
+                <p class="about__text">
+                    The tools and training material in this ecosystem are developed by
+                    <strong>Jeferyd Yepes-García</strong> at the
+                    <a href="https://www.unifr.ch/bio/en/groups/falquet/" target="_blank" rel="noopener">Falquet group (BUGFri)</a>,
+                    University of Fribourg, in collaboration with <strong>Laurent Falquet</strong>,
+                    within the Swiss Institute of Bioinformatics (SIB). They are released open source
+                    for the benefit of the microbial genomics community.
+                </p>
+                <p class="about__text">
+                    Development was supported by the <em>Federal Commission for Scholarships for Foreign Students (FCS)</em>,
+                    through the program <em>Swiss Government Excellence Scholarships</em>.
+                </p>
+                <ul class="about__misc">
+                    <li>Open source &amp; open access</li>
+                    <li>nF-core aligned pipelines</li>
+                    <li>FAIR &amp; reproducible</li>
+                    <li>Community contributions welcome</li>
+                </ul>
+            </div>
+            <div class="about__side">
+                <div class="person">
+                    <span class="person__initials" style="--pc:#38bdf8;">JY</span>
+                    <div>
+                        <h4>Jeferyd Yepes-García</h4>
+                        <p>Nextflow ambassador &middot; Researcher, University of Fribourg / SIB</p>
+                        <div class="person__links">
+                            <a href="https://jeferydyepes.com/" target="_blank" rel="noopener">Website</a>
+                            <a href="https://github.com/jeffe107" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://orcid.org/0000-0002-3278-3332" target="_blank" rel="noopener">ORCID</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <span class="person__initials" style="--pc:#34d399;">LF</span>
+                    <div>
+                        <h4>Laurent Falquet</h4>
+                        <p>Group leader &middot; University of Fribourg / SIB</p>
+                        <div class="person__links">
+                            <a href="https://www.unifr.ch/bio/en/groups/falquet/" target="_blank" rel="noopener">Group</a>
+                            <a href="https://orcid.org/0000-0001-8102-7579" target="_blank" rel="noopener">ORCID</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__quote">
+                    &ldquo;Choosing a pipeline should be a decision based on solid premises, not convenience.&rdquo;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div>
+                <a class="nav__brand" href="#top">
+                    <span class="nav__mark">M</span>
+                    <span class="nav__name">Metagenomics<span>Stack</span></span>
+                </a>
+                <p class="footer__text">An integrated ecosystem of open-source tools and training material for metagenomics and microbial bioinformatics.</p>
+            </div>
+            <div>
+                <h5>Tools</h5>
+                <a href="https://2pipe.app/" target="_blank" rel="noopener">2Pipe</a>
+                <a href="https://github.com/jeffe107/MAGFlow" target="_blank" rel="noopener">MAGFlow</a>
+                <a href="https://bigmag.online/" target="_blank" rel="noopener">BIgMAG</a>
+                <a href="https://molab.marimo.io/notebooks/nb_2RsaEmFXPHf9wLQVdSu95z/app" target="_blank" rel="noopener">CAZyBERT</a>
+            </div>
+            <div>
+                <h5>Learning</h5>
+                <a href="https://taxoflow.work/" target="_blank" rel="noopener">TaxoFlow tutorial</a>
+                <a href="https://sib-swiss.github.io/nextflow-training/" target="_blank" rel="noopener">Nextflow in Action</a>
+                <a href="https://sib-swiss.github.io/metagenomics-training/" target="_blank" rel="noopener">Metagenomics workshop</a>
+                <a href="https://github.com/jeffe107/workshopBioSeryl" target="_blank" rel="noopener">Python for bioinformatics</a>
+            </div>
+            <div>
+                <h5>Author</h5>
+                <a href="https://jeferydyepes.com/" target="_blank" rel="noopener">jeferydyepes.com</a>
+                <a href="https://github.com/jeffe107" target="_blank" rel="noopener">github.com/jeffe107</a>
+                <a href="https://www.unifr.ch/bio/en/groups/falquet/" target="_blank" rel="noopener">BUGFri &mdash; Unifr</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>&copy; <span id="year"></span> Metagenomics Stack &mdash; Jeferyd Yepes-García.</span>
+            <span>All tools are open source. Citations welcome.</span>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top" hidden>&uarr;</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
